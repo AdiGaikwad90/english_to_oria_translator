@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English-Oria Language Translator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>English-Oria Translation</h1>
+    <form id="translation-form">
+        <label for="input_text">Enter English Text:</label><br>
+        <textarea name="input_text" id="input_text" rows="4" cols="50"></textarea><br>
+        <label for="dest-language">Choose Language:</label><br>
+        <select id="dest-language" name="dest_language">
+            <option value="or">Odia</option>
+            <!-- Add more language options as needed -->
+        </select><br>
+        <button type="submit">Translate</button>
+    </form>
+    <div id="translation-result">
+        <h2>Translated Odia Text:</h2>
+        <p id="translated-text"></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
